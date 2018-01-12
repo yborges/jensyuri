@@ -4,6 +4,11 @@ body {
     margin: 0 0 0 0;
 }
 
+h1 {
+    font-size: 180% ;
+    font-weight: lighter;
+    font-style: normal;
+}
 .header {
     margin-top: 0;
     margin-bottom: 0;
@@ -19,8 +24,8 @@ table tr td{
     background: #FFFFFF url("https://www.talonx.com/file/2013/09/polyagonal-web-design.jpg")
     no-repeat left top;
     border-color: black;
-    border-style: initial;
-    border-spacing: initial;
+    border-style: solid;
+    border-spacing: 0px;
     border-width: medium;
 }
 
@@ -31,4 +36,24 @@ thead {
 
 section p {
     text-indent: 50px;
+    font-variant: small-caps;
+}
+
+#emptyTable tr td{
+    border: medium solid red;
+}
+
+ul {
+    list-style-type: square;
+    list-style-position: inside;
+}
+
+#randm {
+
+    list-style-image: url("https://www.spriters-resource.com/resources/sheet_icons/72/75568.png");
+    font: normal small-caps bold 250% "Comic Sans MS";
+}
+
+#lijst {
+    list-style: circle outside;
 }

@@ -1,3 +1,34 @@
 body {
-    background-color: gainsboro;
+    background-color: rgba(182, 247, 255, 0);
+    font-family: "Baghdad";
+    margin: 0 0 0 0;
+}
+
+.header {
+    margin-top: 0;
+    margin-bottom: 0;
+    margin-left: 0;
+    margin-right: 0;
+    background-image: url("https://www.wpeka.com/rgh/wp-content/uploads/2016/08/marble_texture4504-1.jpg");
+    background-repeat: repeat-x;
+    color: #FFFFFF;
+    text-transform: uppercase;
+}
+
+table tr td{
+    background: #FFFFFF url("https://www.talonx.com/file/2013/09/polyagonal-web-design.jpg")
+    no-repeat left top;
+    border-color: black;
+    border-style: initial;
+    border-spacing: initial;
+    border-width: medium;
+}
+
+thead {
+    text-align: left;
+    text-decoration: underline;
+}
+
+section p {
+    text-indent: 50px;
 }

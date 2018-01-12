@@ -13,17 +13,16 @@
 </head>
 
 <body>
-
-    <nav>
-        <a href="https://www.apple.com/nl/">Apple</a>
-        <a href="http://www.samsung.com/nl/">Samsung</a>
-        <a href="http://consumer.huawei.com/nl/">Huawei</a>
-    </nav>
-
-    <h1>
-        Welcome to Jens &amp; Yuri's ugly smartphone webshop!
-    </h1>
-
+    <div class="header">
+        <h1>
+            Welcome to Jens &amp; Yuri's ugly smartphone webshop!
+        </h1>
+        <nav>
+            <a href="https://www.apple.com/nl/">Apple</a>
+            <a href="http://www.samsung.com/nl/">Samsung</a>
+            <a href="http://consumer.huawei.com/nl/">Huawei</a>
+        </nav>
+    </div>
     <blockquote cite="http://www.telegraph.co.uk/technology/0/steve-jobs-his-10-most-inspirational-quotes/">
         <em>Stay hungry. Stay foolish.</em> &#126; Steve Jobs
     </blockquote>
@@ -75,6 +74,7 @@ break;
     <form action="https://wt.ops.labs.vu.nl/api18/a1d1ab71" method="post">
         <table id="TopSellingModelsTable">
             <caption>Top selling models</caption>
+            <thead>
             <tr>
                 <th>brand name</th>
                 <th>model name</th>
@@ -82,7 +82,7 @@ break;
                 <th>screen size</th>
                 <th>image location</th>
             </tr>
-
+            </thead>
             <tr>
                 <td>Apple</td>
                 <td>iPhone X</td>
@@ -125,6 +125,37 @@ break;
         <input type="submit" value="Submit new phone" required>
     </form>
 
+    <table id="emptyTable">
+        <caption>Empty extra table</caption>
+        <tr>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+    </table>
     <h4>Contact</h4>
     <dl>
         <dt>Yuri</dt>

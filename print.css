@@ -1,4 +1,14 @@
 
 body {
-    background-color: hotpink;
+    background-color: white;
+}
+
+@media print {
+    h2 {page-break-before: always;}
+}
+
+@media print {
+    p {
+        orphans: 0;
+    }
 }

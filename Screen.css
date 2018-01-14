@@ -57,4 +57,43 @@ ul {
 
 #lijst {
     list-style: circle outside;
+    vertical-align: text-top;
+}
+
+#latin {
+    float:right;
+    width: 200px;
+    height: 100px;
+}
+
+#latinmid{
+
+    width: 60px;
+    height: 40px;
+    vertical-align: text-bottom;
+}
+
+#TopSellingModelsTable caption {
+    caption-side: top;
+}
+
+#emptyTable caption {
+    caption-side: bottom;
+}
+
+
+a:link {
+    color: red;
+}
+
+a:visited {
+    color: green;
+}
+
+a:hover {
+    color: hotpink;
+}
+
+a:active {
+    color: blue;
 }

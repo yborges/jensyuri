@@ -94,6 +94,7 @@ a:hover {
     color: hotpink;
 }
 
-a:active {
-    color: blue;
+.active_links:active {
+    font-size: large;
+    color: black;
 }

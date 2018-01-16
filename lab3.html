@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<head>
+
+    <meta charset="UTF-8">
+    <title>lab 2</title>
+</head>
+
+<body>
+<h1>Lab 2</h1>
+
+<h3>Question 1</h3>
+<p>We used Safari. By enabling the Develop tab and clicking on JavaScript Console we were able to open the console.
+To test console.log() we inserted an external JS file to the index.html and executed console.log("Hello World")
+which appeared on Safari's console just fine.</p>
+<h3>Question 2</h3>
+<p>We added these lines in js</p>
+
+<pre><code>document.body.style.backgroundColor = "red";
+   for(i = 0; i < document.getElementsByTagName("a").length; i++) {
+    document.getElementsByTagName("a")[i].classList.add("active_links");
+}</code></pre>
+
+<p>And this in screen.css:</p>
+<pre>    .active_links:active {
+    font-size: large;
+    color: deeppink;
+    }</pre>
+
+<h3>Question 3</h3>
+<p>$("a").addClass("active_links");</p>
+<p>Pro's:</p>
+<ul>
+    <li>Shorter</li>
+    <li>You don't need to loop through all the elements to change things.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+    <li>learning curve</li>
+    <li></li>
+</ul>
+<h3>Question 4</h3>
+<p>I'm more familiar with Java. The syntax of JS and Java are similar and based on C. Java is pre compiled and therefore
+it achieves better performance. Python and JS are interpreted at runtime and are therefore slower. JS relies much
+more on callback functions. Java is statically typed whereas Python and JS are dynamically typed, which leads to
+more freedom when coding, but that comes with a price: unstructured code.</p>
+<h3>Question 5</h3>
+<p>AJAX means Asynchronous JavaScript And XML. It is asynchronous because the browser(client) is still able to
+perform actions while waiting for a request from the server. It can also be set to synchronous which would lock
+the browser until the server responds.</p>
+<h3>Question 6</h3>
+<p></p>
+<h3>Question 7</h3>
+<p></p>
+<h3>Question 8</h3>
+<p></p>
+<h3>Question 9</h3>
+<p></p>
+<h3>Question 10</h3>
+<p></p>
+
+</body>

@@ -4,6 +4,13 @@
 
     <meta charset="UTF-8">
     <title>lab 2</title>
+    <style>
+
+        #map {
+            height: 400px;
+            width: 100%;
+        }
+    </style>
 </head>
 
 <body>
@@ -71,6 +78,25 @@ the browser until the server responds.</p>
 using AJAX and generates a mark on the map. The API required the autocomplete functionality to be linked to the
 map and for an event listener to be created to handle the changes in the text field of the autoselect HTML element.</p>
 <h3>Question 10</h3>
-<p></p>
+
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0P74BU-HMMI4X70Qu1eWxjSJyVDseStY&callback=initMap">
+</script>
+
 
 </body>

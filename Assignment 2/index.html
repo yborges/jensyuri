@@ -78,11 +78,11 @@ break;
             <caption>Top selling models</caption>
             <thead>
             <tr>
-                <th>brand name</th>
-                <th>model name</th>
-                <th>operating system</th>
-                <th>screen size</th>
-                <th>image location</th>
+                <th onclick="sortTable(0)">brand name</th>
+                <th onclick="sortTable(1)">model name</th>
+                <th onclick="sortTable(2)">operating system</th>
+                <th onclick="sortTable(3)">screen size</th>
+                <th onclick="sortTable(4)">image location</th>
             </tr>
             </thead>
             <tr>
@@ -125,6 +125,7 @@ break;
             </tr>
         </table>
         <input type="submit" value="Submit new phone">
+        <input type="reset" value="Reset">
     </form>
 
     <table id="emptyTable">
@@ -186,7 +187,7 @@ break;
     <li>goed, doeix</li>
 </ul>
     <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
-    <script src="helloworld.js"></script>
+    <script src="main.js"></script>
 </body>
 
 </html>

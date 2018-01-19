@@ -98,3 +98,8 @@ a:hover {
     font-size: large;
     color: black;
 }
+
+.phones {
+    width:33px;
+    height:65px;
+}

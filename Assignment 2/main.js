@@ -1,23 +1,109 @@
 //TODO explain where this code comes from and how it works
 
+
+fillTable(true);
+
 /*
 * We were asked to create a reset button for the form in the index page that will send the form to the server via a
 * HTTP GET. The problem is that this form already uses the method POST when the user presses the button submit.
 * This function chooses the right form method and completes the form submission.
 * */
 function submitForm(caller) {
-    form = document.getElementById("myForm");
-    console.log(caller.value);
-    if(caller.value === "submit") {
-        form.action = "https://wt.ops.labs.vu.nl/api18/a1d1ab71";
-        form.method = "post";
-        form.submit();
-    } else if (caller.value === "reset") {
-        form.action = "https://wt.ops.labs.vu.nl/api18/a1d1ab71/reset";
-        form.method = "get";
+
+    var data ={
+        brand: $('#inputBrand').val(),
+        model: $('#inputModel').val(),
+        os: $('#inputOS').val(),
+        screensize: $('#inputScreensize').val(),
+        image: $('#inputImage').val()
     }
-    form.submit();
+    form = document.getElementById("myForm");
+    if(caller.value === "submit") {
+        $.ajax({
+            url: 'https://wt.ops.labs.vu.nl/api18/a1d1ab71',
+            type: 'POST',
+            data: data
+        }).done(function(data,status,xhr){
+            console.log("jens here");
+            console.log(data.URI);
+            console.log(data,status, xhr);
+            fillTable(false);
+        });
+    } else if (caller.value === "reset") {
+        $.ajax({
+            url: 'https://wt.ops.labs.vu.nl/api18/a1d1ab71/reset',
+            type: 'GET',
+            data: data
+        }).done(function(data,status,xhr){
+        });
+    }
 }
+
+/*
+This function should be called at the beginning of the code to fill in the table with data coming from VU's server.
+It expects the argument start to be true when initializing the table and false otherwise.
+*/
+function fillTable(start){
+    if (start === true){
+        //ask all the elements from VU's server, loop through all items in the json response and fill the table
+        $.ajax({
+            url: 'https://wt.ops.labs.vu.nl/api18/a1d1ab71',
+            type: 'GET',
+        }).done(function(data,status,xhr){
+            var i;
+            for ( i=0; i < data.length; i++ ) {
+                var row = '<tr><td>' + data[i].brand + '</td>'
+                + '<td>' + data[i].model + '</td>'
+                + '<td>' + data[i].os + '</td>'
+                + '<td>' + data[i].screensize + '</td>'
+                + '<td><img src="' + data[i].image + '" class="phones"></td>'
+                + '</tr>>';
+                $("#TopSellingModelsTable").prepend(row);
+            }
+        });
+    } else if(start === false) {
+        var data ={
+            brand: $('#inputBrand').val(),
+            model: $('#inputModel').val(),
+            os: $('#inputOS').val(),
+            screensize: $('#inputScreensize').val(),
+            image: $('#inputImage').val()
+        }
+        var row = '<tr><td>' + data.brand + '</td>'
+            + '<td>' + data.model + '</td>'
+            + '<td>' + data.os + '</td>'
+            + '<td>' + data.screensize + '</td>'
+            + '<td><img src="' + data.image + '" class="phones"></td>'
+            + '</tr>>';
+        console.log(row);
+        $("#TopSellingModelsTable").prepend(row);
+    }
+}
+
+
+/*
+var data = {
+            email: $('#inputEmail').val(),
+            password: $('#inputPassword').val()
+        };
+
+        $.ajax({
+           url: '/r/login/check',
+           type: 'GET',
+           //dataType: 'json',
+           data: data
+        }).done(function(data, status, xhr){
+
+            var token = xhr.getResponseHeader('apikey');
+
+            $.ajaxSetup({
+               headers: {
+                   apikey: token
+               }
+            });
+            app.router.admin();
+        });
+ */
 
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;

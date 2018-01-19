@@ -73,7 +73,7 @@ break;
         <li>Sony</li>
     </ul>
 
-    <form action="https://wt.ops.labs.vu.nl/api18/a1d1ab71" method="post">
+    <form id="myForm">
         <table id="TopSellingModelsTable">
             <caption>Top selling models</caption>
             <thead>
@@ -124,8 +124,8 @@ break;
                 <td><input type="url" name= "image" placeholder ="image location"></td>
             </tr>
         </table>
-        <input type="submit" value="Submit new phone">
-        <input type="reset" value="Reset">
+        <input type="button" value="submit" onclick="submitForm(this)">
+        <input type="button" value="reset" onclick="submitForm(this)">
     </form>
 
     <table id="emptyTable">

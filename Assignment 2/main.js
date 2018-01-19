@@ -1,7 +1,22 @@
 //TODO explain where this code comes from and how it works
 
-function selectMethod() {
-    
+/*
+* We were asked to create a reset button for the form in the index page that will send the form to the server via a
+* HTTP GET. The problem is that this form already uses the method POST when the user presses the button submit.
+* This function chooses the right form method and completes the form submission.
+* */
+function submitForm(caller) {
+    form = document.getElementById("myForm");
+    console.log(caller.value);
+    if(caller.value === "submit") {
+        form.action = "https://wt.ops.labs.vu.nl/api18/a1d1ab71";
+        form.method = "post";
+        form.submit();
+    } else if (caller.value === "reset") {
+        form.action = "https://wt.ops.labs.vu.nl/api18/a1d1ab71/reset";
+        form.method = "get";
+    }
+    form.submit();
 }
 
 function sortTable(n) {

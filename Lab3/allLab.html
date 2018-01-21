@@ -252,5 +252,39 @@
         src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0P74BU-HMMI4X70Qu1eWxjSJyVDseStY&callback=initMap">
 </script>
 
+<h1>Lab 4</h1>
+
+<h3>Question 1.a.</h3>
+<p>There are words in the list that have occured zero times in the text file, like 'iv' and 'ix'.</p>
+<h3>Question 1.b.</h3>
+<p>The lecturers explanation of stop words: <q>Stop words are meaningless, like I or the or ir.</q> these words are
+    removed. It makes sence to put all of these words in the stop words list, except for the word Alice. Because Alice
+    is a name and should not be ignored. And also i dont think that 's' and 't' should be ignored, these re just results
+    of bad tokenizing. </p>
+<h3>Question 1.c.</h3>
+<p>No I dont think the top 30 follows Zipf's law, because the first word occurs 2.25 times more than the third word on
+    the top 30 (which should be 3 times) and the first word occurs 2.6 times more than the fourth word on the top 30
+    (which should be 4 times). You can also see this because the graph is not a straight line in the beginning. </p>
+<h3>Question 1.d.</h3>
+<p>Heaps law applies. In this case it describes the dictionary size as a function of the input tokens</p>
+
+<h3>Question 2.a.</h3>
+<p><q>Typically you measure information retrieval systems on two metrics, precision and recall.
+    precision is the number of relevant documents that you have found.
+    Recall is the number of relevant documents found, normalized by the number of relevant documents that exist. </q>
+    The quality of search will be assessed based on the relevance of the returned results.
+    The search returns all the document parts, so the precision = relevant parts/total parts.</p>
+<h3>Question 2.b.</h3>
+<p>Computing the TFIDF matrix takes quite some time, because there has to be calculated a weight of occurance for each
+    word in each chapter. </p>
+<h3>Question 2.c.</h3>
+<p>TF vs TF-IDF search.</p>
+<p>TF-IDF is TF combined with IDF, this results in a better precision, but a worse recall. The difference is basically
+    that TF-IDF takes the importancy of terms in account, so words such as 'is' and 'of' weigh less. while rare words
+    weigh more.</p>
+<h3>Question 2.d.</h3>
+<p></p>
+<h3>Question 2.e.</h3>
+<p></p>
 </body>
 </html>

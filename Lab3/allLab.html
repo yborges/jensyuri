@@ -1,0 +1,256 @@
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Lab 1</title>
+</head>
+
+<body bgcolor="yellow">
+<h1>Lab 1</h1>
+
+<h3>Question 1</h3>
+<p>‘W3C was pushing for an accessible web-one that worked for blind and disabled people’. W3C ‘also wanted a semantic web, doing for ideas what it had done previously for documents-linking all of worlds information into a sort of decentralized, collectivized google-for-ideas.’ While WHATWG ‘wanted to make the monkey dance’
+</p>
+<h3>Question 2</h3>
+<p>The difference between the internet and the World Wide Web is that the Internet is the network of computers connected to each other worldwide, and the World Wide Web is a system of documents and other resources that are accessible by URLs and actually run on the infrastructure we understand as the internet.
+</p>
+<h3>Question 3</h3>
+<p>URIs, HTTP, HTML; URIs for being able to locate a resource in the World Wide Web, HTTP for transferring information between devices in the World Wide Web and HTML the markup language used by the clients(usually browsers) to render the information, or pages.
+</p>
+<h3>Question 4</h3>
+<p>The file exported from word contains a lot of XML code. Part of the code is just metadata about the document describing for example the authors based on the owner of the office word license. Another part of the XML seems to be specifying an XML scheme for a more specific rendering of the page, probably so that the Microsoft Office Word can still reopen the exported HTML document. Furthermore the document uses CSS to style the page.</p>
+<h3>Question 5</h3>
+<p>The authorative sources are IETF and ISOC the main bodies that take care of the development of the internet. The descriptions were found in RFCs, publications describing technologies such as protocols and request for changing them. You cannot get a better description of a protocol than the protocol description itself!</p>
+
+<table id="protocolTable">
+    <tr>
+        <th>protocol name</th>
+        <th>port number</th>
+        <th>description</th>
+        <th>authorative source</th>
+    </tr>
+
+    <tr>
+        <td>HTTP</td>
+        <td>80</td>
+        <td>The Hypertext Transfer Protocol (HTTP) is a stateless application-
+            level protocol for distributed, collaborative, hypermedia information
+            systems.</td>
+        <td><a href="https://tools.ietf.org/html/rfc7235">rfc7235</a></td>
+    </tr>
+    <tr>
+        <td>SSH</td>
+        <td>22</td>
+        <td>The Secure Shell (SSH) is a protocol for secure remote login and
+            other secure network services over an insecure network.</td>
+        <td><a href="https://tools.ietf.org/html/rfc4253">rfc4253</a></td>
+    </tr>
+    <tr>
+        <td>FTP</td>
+        <td>21</td>
+        <td>The objectives of FTP are 1) to promote sharing of files (computer
+            programs and/or data), 2) to encourage indirect or implicit (via
+            programs) use of remote computers, 3) to shield a user from
+            variations in file storage systems among hosts, and 4) to transfer
+            data reliably and efficiently.  FTP, though usable directly by a user
+            at a terminal, is designed mainly for use by programs.</td>
+        <td><a href="https://tools.ietf.org/html/rfc959">rfc959</a></td>
+    </tr>
+
+</table>
+
+<h3>Question 6</h3>
+
+<p>The strong tag means that the text inside the tag should somehow be shown differently so as to make it more visible. But how to get the attention of the user may vary from browser to browser or even between different users, think of a blind person for example. When using the bold tag, one defines that the way to get the attention from the user will be done by only making the text bold, but this might not be enough in certain situations. In short: b is not semantic and strong is semantic and since the latter carries more meaning about the content it should be preferred. Another example would be the tags cite and i.</p>
+
+<h3>Question 7</h3>
+
+<p>Div is a block element and span is an inline element. A div introduces a line break so it should not be used when e.g. including some text in a paragraph.</p>
+
+<h3>Question 8</h3>
+
+<p>When styling a webpage, this can be done statically by including the desired attributes to the tags you want to style. However design is a pretty serious business and having the style hardcoded in the html would make the whole design more difficult to debug and to finish. The HTML code would be much more difficult to read too. Using CSS brings a separation between the elements of the page and the design of the page. Furthermore CSS allows for easy selection of multiple elements which makes it much easier to develop and change the page design.</p>
+
+<h3>Question 9</h3>
+
+<p>The letters appear tilted as expected.</p>
+
+<h3>Question 10</h3>
+
+<p>Safari and Firefox. Firefox uses Gecko and Safari uses Webkit for rendering. Firefox is open-source, safari isn't. </p>
+
+
+<h1>Lab 2</h1>
+
+<h3>Question 1</h3>
+<p>Guideline 1. Provide equivalent alternatives to auditory and visual content.</p>
+<h3>Question 2</h3>
+<h4>We ran the WAVE accesibility checker on the Apple website. Our key observations are: </h4>
+<dl>
+    <dt>Errors</dt>
+    <dd>The Apple site, only had two errors, we think they did a very good job, considering the errors were not very big errors</dd>
+    <dt>Alerts</dt>
+    <dd>The Apple website had only one alert, which was that h1 was never used. Not a very big issue.</dd>
+</dl>
+
+<h3>Question 3</h3>
+<p>We tested three color combinations</p>
+<dl>
+    <dt>Red (#FF0000) on black</dt>
+    <dd>WCAG 2 AA Compliant: No</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: No</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): No</dd>
+    <dt>Red (#FF0000) on white (#FFFFFF)</dt>
+    <dd>WCAG 2 AA Compliant: No</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: No</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): No</dd>
+    <dt>black (#000000) on white (#FFFFFF)</dt>
+    <dd>WCAG 2 AA Compliant: Yes</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: Yes</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): Yes</dd>
+
+    <blockquote cite="https://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF"> <q>The Colour Contrast Check Tool allows to specify a foreground and a background colour and determine if they provide enough of a contrast "when viewed by someone having color deficits or when viewed on a black and white screen"[W3C].
+        The tool will indicate that the colours pass the test if both the colour difference and the brightness difference exceed their threshold. It will indicate that it sort of passes if only one of the two values exceed their threshold. And finally, it'll fail to pass if neither value exceeds its threshold.
+        The tool will also indicate if the colours pass the newer WCAG 2.0 contrast ratio formula. The WCAG 2.0 formula differentiates between text smaller than 18pt text larger than 18pt (or text that is bold and larger than 14pt). For AA compliance, text should have a ratio of at least 4.5:1 (larger text, at least 3:1). For AAA compliance, text should have a ratio of at least 7:1 (larger text, at least 4.5:1).
+    </q>
+    </blockquote>
+</dl>
+<h3>Question 4</h3>
+<p>Native apps are faster because its execution is nearer the hardware. But browsers are getting faster and faster and web apps have become very important even for big companies. Web apps are easier to maintain and access to the greater public.</p>
+<h3>Question 5</h3>
+<p>The internationalization group ensures that web technologies work with everywhere. Language is a main aspect of this. Ensuring that foreign language characters are available and easy to implement are very important aspects that the internationalization groups takes care of.</p>
+<h3>Question 6</h3>
+<dl>
+    <dt>http://www.few.vu.nl</dt>
+    <dd>The IP-address is: 130.37.164.154</dd>
+    <dd>I found the answer by opening my terminal and in terminal I typed: nslookup wwww.few.vu.nl and then I got my answer.</dd>
+    <dt>http://www.cs.vu.nl</dt>
+    <dd>The IP-address is: 130.37.164.154 (exactly the same)</dd>
+    <dd>I found the answer by opening my terminal and in terminal I typed: nslookup wwww.cs.vu.nl and then I got my answer.</dd>
+
+    <!-- Yuri kan jij deze vraag beantwoorden:-->
+    <p>How could the results you find influence the web servers' functionality?</p>
+</dl>
+
+<h3>Question 7</h3>
+
+<!-- heb al die reasons overgenomen van https://www.webopedia.com/DidYouKnow/Internet/ipv6_ipv4_difference.html en eentje van wiki. Moet misschien een beetje worden aangepast of in iig gequote maar ik wist niet hoe dat moet binnen li-->
+<h4>Main features of IPv6</h4>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<h4>Reasons to move from 4 to 6:</h4>
+<ul>
+    <li>Far more addresses are needed to connect devices than the IPv4 address space had available</li>
+    <li>The use of multicast addressing is expanded and simplified</li>
+    <li>Simpler header formats</li>
+    <li>Built-in authentication and privacy support</li>
+</ul>
+<h3>Question 8</h3>
+<blockquote cite ="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">The Multipurpose Internet Mail Extensions (MIME) type is a standardized way to indicate the nature and format of a document.</blockquote>
+<h4>Most common subtypes of text:</h4>
+<ul>
+    <li>text/plain</li>
+    <li>text/html</li>
+</ul>
+<a href="https://www.iana.org/assignments/media-types/media-types.xhtml">the most authoritative source with the complete list</a>
+
+<h3>Question 9</h3>
+<p>GET, POST, DELETE. Get asks for information, post attempts to transmit information, delete attempts to delete information on the server.</p>
+
+<h3>Question 10</h3>
+<p>key: a1d1ab71</p>
+
+<h1>Lab 3</h1>
+
+<h3>Question 1</h3>
+<p>We used Safari. By enabling the Develop tab and clicking on JavaScript Console we were able to open the console.
+    To test console.log() we inserted an external JS file to the index.html and executed console.log("Hello World")
+    which appeared on Safari's console just fine.</p>
+<h3>Question 2</h3>
+<p>We added these lines in js</p>
+
+<pre><code>document.body.style.backgroundColor = "red";
+   for(i = 0; i < document.getElementsByTagName("a").length; i++) {
+    document.getElementsByTagName("a")[i].classList.add("active_links");
+}</code></pre>
+
+<p>And this in screen.css:</p>
+<pre>    .active_links:active {
+    font-size: large;
+    color: deeppink;
+    }</pre>
+
+<h3>Question 3</h3>
+<p>$("a").addClass("active_links");</p>
+<p>Pro's:</p>
+<ul>
+    <li>Shorter</li>
+    <li>You don't need to loop through all the elements to change things.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+    <li>learning curve</li>
+    <li></li>
+</ul>
+<h3>Question 4</h3>
+<p>I'm more familiar with Java. The syntax of JS and Java are similar and based on C. Java is pre compiled and therefore
+    it achieves better performance. Python and JS are interpreted at runtime and are therefore slower. JS relies much
+    more on callback functions. Java is statically typed whereas Python and JS are dynamically typed, which leads to
+    more freedom when coding, but that comes with a price: unstructured code.</p>
+<h3>Question 5</h3>
+<p>AJAX means Asynchronous JavaScript And XML. It is asynchronous because the browser(client) is still able to
+    perform actions while waiting for a request from the server. It can also be set to synchronous which would lock
+    the browser until the server responds.</p>
+<h3>Question 6</h3>
+<p>The role of the host objects in JavaScript is to let JS change their properties. e.g. the document and window host
+    objects are accesible via JS and let us change properties of html elements and access the size of the host window.
+    There are no equivalents in Java or Python because these programs are to some extent executed in the same environment
+    as far as the programs are concerned. Although the host computers aren't the same and their properties can actually
+    be accessed but they are not considered objects, most probably because they are read-only. </p>
+<h3>Question 7</h3>
+<p></p>
+<dl>
+    <dt>Window</dt>
+    <dd>Interacts with browser window.</dd>
+    <dt>Document</dt>
+    <dd>Interacts with page in the window.</dd>
+</dl>
+<h3>Question 8</h3>
+<p>Events are as the name says "things" that happen to elements in the DOM. When an event is triggered, event listeners
+    can react by executing an action. Event listeners are also elements in the DOM that have event handlers attached
+    to them.</p>
+<h3>Question 9</h3>
+<p>The autocomplete functionality creates an interactive text field that shows autocomplete text as the user is typing
+    using AJAX and generates a mark on the map. The API required the autocomplete functionality to be linked to the
+    map and for an event listener to be created to handle the changes in the text field of the autoselect HTML element.</p>
+<h3>Question 10</h3>
+
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0P74BU-HMMI4X70Qu1eWxjSJyVDseStY&callback=initMap">
+</script>
+
+</body>
+</html>

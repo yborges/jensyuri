@@ -1,0 +1,29 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1516531153262.000,
+    "dirty" : false,
+    "encoding" : "",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "98E0E918",
+    "lastKnownWriteTime" : 4294967302,
+    "last_content_update" : 1516531153262,
+    "path" : null,
+    "project_path" : null,
+    "properties" : {
+        "cacheKey" : "635F9EAB",
+        "caption" : "alice_tfm",
+        "contentUrl" : "grid_resource/gridviewer.html?env=&obj=alice_tfm&cache_key=635F9EAB",
+        "displayedObservations" : 2575,
+        "environment" : "",
+        "object" : "alice_tfm",
+        "preview" : 0,
+        "totalObservations" : 2575,
+        "variables" : 13
+    },
+    "relative_order" : 2,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_dataframe"
+}

@@ -1,6 +1,3 @@
-//TODO explain where this code comes from and how it works
-
-
 fillTable(true);
 
 /*
@@ -80,32 +77,9 @@ function fillTable(start){
     }
 }
 
-
 /*
-var data = {
-            email: $('#inputEmail').val(),
-            password: $('#inputPassword').val()
-        };
-
-        $.ajax({
-           url: '/r/login/check',
-           type: 'GET',
-           //dataType: 'json',
-           data: data
-        }).done(function(data, status, xhr){
-
-            var token = xhr.getResponseHeader('apikey');
-
-            $.ajaxSetup({
-               headers: {
-                   apikey: token
-               }
-            });
-            app.router.admin();
-        });
- */
-
-/*source for function sortTable(n): https://www.w3schools.com/howto/howto_js_sort_table.asp */
+source for function sortTable(n): https://www.w3schools.com/howto/howto_js_sort_table.asp
+explanation: sorts the table using bubble sort */
 function sortTable(n) {
     var table, rows, switching, i, x, y, shouldSwitch, dir, switchcount = 0;
     table = document.getElementById("TopSellingModelsTable");

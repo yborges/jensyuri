@@ -1,0 +1,64 @@
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+
+<body>
+    <h3>Question 1</h3>
+    <p>1. HTTP GET is idempotent because it shouldn't matter how many times you create an HTTP GET request to a server:
+        the outcome should be the same, the requested resource should be returned to the client requesting it. HTTP POST
+        on the other hand isn't idempotent because POST is meant to actually change something on the server e.g. adding
+        a new entry to a database which may or may not result in the same outcome.
+    </p>
+    <p>2. Idempotent requests are easier to cache because the response sent back is always the same and hence cacheable.
+    </p>
+    <p>3. Visitor counters are actually updated with each visit to the website. The client still asks this information via
+        HTTP GET, but it is a resource that changes in value all the time.</p>
+    <p>4. A visitor counter takes into account how many times one IP visited the website at a given time. Since more than
+    one client can access a server through a proxy and the proxy has always the same address, when clients use proxies
+    the visitor counter isn't actually accurate anymore since the server will only count just the proxy as a visitor.</p>
+    <h3>Question 2</h3>
+    <p>Stateless means that no information about the connection is saved. In the case of browsers this means using
+        no cookies, which are actually just pieces of information saved by the browser. Stateless protocols require
+        a lot of space in the server side when the application has a lot of clients. This is the main advantage of the
+        stateless protocol. The disadvantage is a stateless website by definition doesn't keep track of what the session.
+        This is a problem because nowadays to make an application dynamic and data-driven, developers must somehow keep
+        track of what the user is doing.
+    </p>
+    <h3>Question 3</h3>
+    <p>The information about a shopping basket needs to be saved somewhere. Usually this is done by saving the 'state'
+        of the application in a cookie. This information can also be saved on the server side and retrived upon
+        the client's returning to the website. The latter is more difficult to create because it would require a
+        database to store the shopping bask information or expensive RAM memory space.
+    </p>
+    <h3>Question 4</h3>
+    <table>
+    <tr>
+        <th>Company</th>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Response format</th>
+        <th>response codes</th>
+    </tr>
+    <tr>
+        <th>Spotify</th>
+        <th>/v1/albums/{id}</th>
+        <th>GET</th>
+        <th>JSON</th>
+        <th>200: OK, 401: NOT authorized, 503: overloaded</th>
+    </tr>
+    <tr>
+        <th>Twitter</th>
+        <th>/1.1/trends/place.json?id=1</th>
+        <th>GET</th>
+        <th>JSON</th>
+        <th>200: OK, 401: NOT authorized, 503: overloaded</th>
+    </tr>
+    </table>
+
+    <h3>Question 5</h3>
+</body>
+
+</html>

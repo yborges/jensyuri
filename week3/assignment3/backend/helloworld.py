@@ -32,13 +32,33 @@ def get(db):
 @patch('/api')
 def patch(db):
     return
+
 #TODO CRUD -> UPDATE -> PUT METHOD (complete resource)
 @put('/api')
 def put(db):
+    id = request.json['id']
+    brand = request.json['brand']
+    model = request.json['model']
+    os = request.json['os']
+    image = request.json['image']
+    screensize = request.json['screensize']
+
+    db.execute("""
+      UPDATE phones
+      SET brand = ?, model = ?, os = ?, image = ?, screensize = ?
+      WHERE id = ?;
+       """, (brand, model, os, image, screensize, id))
+
     return
-#TODO CRUD -> DELETE -> DELETE METHOD
+
 @delete('/api')
-def delete():
+def delete(db):
+
+    id = request.forms.get('id');
+    db.execute("""
+        DELETE FROM phones
+        WHERE id = ?
+        """, id)
     return
 
 #TODO OPTIONS

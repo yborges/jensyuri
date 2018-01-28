@@ -7,7 +7,7 @@ fillTable(true);
 * */
 function submitForm(caller) {
 
-    var data ={
+    var data = {
         brand: $('#inputBrand').val(),
         model: $('#inputModel').val(),
         os: $('#inputOS').val(),
@@ -21,9 +21,6 @@ function submitForm(caller) {
             type: 'POST',
             data: data
         }).done(function(data,status,xhr){
-            console.log("jens here");
-            console.log(data.URI);
-            console.log(data,status, xhr);
             fillTable(false);
         });
     } else if (caller.value === "reset") {
@@ -34,6 +31,20 @@ function submitForm(caller) {
         }).done(function(data,status,xhr){
         });
     }
+}
+
+function deletePhone(caller) {
+
+    var data = {
+        id: $(caller).data('id')
+    };
+    $.ajax({
+            url: 'http://localhost:8089/api',
+            type: 'DELETE',
+            data: data
+        }).done(function(data,status,xhr){
+
+        });
 }
 
 /*
@@ -51,11 +62,12 @@ function fillTable(start){
             console.log(data);
             var i;
             for ( i=0; i < data.length; i++ ) {
-                var row = '<tr><td>' + data[i].brand + '</td>'
+            var row = '<tr><td>' + data[i].brand + '</td>'
                 + '<td>' + data[i].model + '</td>'
                 + '<td>' + data[i].os + '</td>'
                 + '<td>' + data[i].screensize + '</td>'
                 + '<td><img src="' + data[i].image + '" class="phones"></td>'
+                + '<td><input type="button" value="Delete" onclick="deletePhone(this)" data-id="'+ data[i].id + '"></td>'
                 + '</tr>    ';
                 console.log(row);
                 $("#TopSellingModelsTable").prepend(row);
@@ -69,12 +81,13 @@ function fillTable(start){
             screensize: $('#inputScreensize').val(),
             image: $('#inputImage').val()
         }
-        var row = '<tr><td>' + data.brand + '</td>'
-            + '<td>' + data.model + '</td>'
+        var row = '<tr><td>' + data[i].brand + '</td>'
+            + '<td>' + data[i].model + '</td>'
             + '<td>' + data.os + '</td>'
             + '<td>' + data.screensize + '</td>'
             + '<td><img src="' + data.image + '" class="phones"></td>'
-            + '</tr>>';
+             + '<td><input type="button" value="Delete" onclick="deletePhone(this)" data-id="'+ data[i].id + '"></td>'
+            + '</tr>';
         console.log(row);
         $("#TopSellingModelsTable").prepend(row);
     }

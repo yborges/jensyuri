@@ -26,6 +26,7 @@ function submitForm(caller) {
     } else if (caller.value === "reset") {
         $.ajax({
             url: 'http://localhost:8089/api',
+            dataType: 'json',
             type: 'GET',
             data: data
         }).done(function(data,status,xhr){
@@ -40,6 +41,7 @@ function deletePhone(caller) {
     };
     $.ajax({
             url: 'http://localhost:8089/api',
+            dataType: 'json',
             type: 'DELETE',
             data: data
         }).done(function(data,status,xhr){

@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <link rel="stylesheet" type="text/css" href="Print.css">
+    <link rel="stylesheet" type="text/css" href="Screen.css">
+    <meta charset="UTF-8">
+
+    <title>
+        J en Y
+    </title>
+
+</head>
+
+<body>
+    <div class="header">
+        <h1>
+            Welcome to Jens &amp; Yuri's ugly smartphone webshop!
+        </h1>
+        <nav>
+            <a href="https://www.apple.com/nl/">Apple</a>
+            <a href="http://www.samsung.com/nl/">Samsung</a>
+            <a href="http://consumer.huawei.com/nl/">Huawei</a>
+        </nav>
+    </div>
+    <blockquote cite="http://www.telegraph.co.uk/technology/0/steve-jobs-his-10-most-inspirational-quotes/">
+        <em>Stay hungry. Stay foolish.</em> &#126; Steve Jobs
+    </blockquote>
+
+    <figure>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg"
+             alt="Steve Jobs" width="115" height ="180">
+        <figcaption>Steve Jobs</figcaption>
+    </figure>
+
+    <section>
+        <h2>Lorem Ipsum</h2>
+        <p>
+            <img id="latin"  alt="image roman statue" src="http://i.telegraph.co.uk/multimedia/archive/01798/latin_1798220b.jpg">
+            <img id="latinmid" alt="image of coliseum" src="https://www.superprof.co.uk/blog/file/2017/10/ancient-roman-coliseum-700x467.jpeg">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam tincidunt nibh felis, eget bibendum leo eleifend nec. Ut sed leo finibus, efficitur dolor eu, faucibus nulla. Sed pretium nisi a tortor convallis, quis auctor elit vehicula. Morbi congue et est in viverra. Nunc non faucibus risus, quis elementum nibh. Integer eget facilisis nisl. Phasellus sodales eros eget lectus suscipit, vitae gravida ex accumsan. Nam ut aliquam tortor, in ultricies nunc. Aliquam at pharetra arcu. Cras viverra magna at leo tempor lobortis.
+        </p>
+    </section>
+    <h3>
+        About us
+    </h3>
+
+    <p>
+        We are two <strong>computer science</strong> students at the <abbr title="Vrije Universiteit">VU</abbr>.
+    </p>
+
+    <h3>Some funny code</h3>
+<pre>
+    <code>
+while(noSucces)
+{
+tryAgain();
+
+if (dead)
+break;
+}
+    </code>
+</pre>
+
+
+    <h4>The brands we work with:</h4>
+    <ul>
+        <li>Apple</li>
+        <li>Samsung</li>
+        <li>Huawei</li>
+        <li>Nokia</li>
+        <li>HTC</li>
+        <li>Sony</li>
+    </ul>
+
+    <form id="myForm">
+        <table id="TopSellingModelsTable">
+            <caption>Top selling models</caption>
+            <thead>
+            <tr>
+                <th onclick="sortTable(0)">brand name</th>
+                <th onclick="sortTable(1)">model name</th>
+                <th onclick="sortTable(2)">operating system</th>
+                <th onclick="sortTable(3)">screen size</th>
+                <th onclick="sortTable(4)">image location</th>
+            </tr>
+            </thead>
+
+            <tr id="inputrow">
+                <td><input id="inputBrand" type="text" name="brand" placeholder ="brand name"></td>
+                <td><input id="inputModel" type="text" name="model" placeholder ="model name"></td>
+                <td><input id="inputOS" type="text" name="os" placeholder ="operating system"></td>
+                <td><input id="inputScreensize" type="number" name="screensize" placeholder="screen size" required></td>
+                <td><input id="inputImage" type="url" name= "image" placeholder ="image location"></td>
+            </tr>
+        </table>
+        <input type="button" value="submit" onclick="submitForm(this)">
+        <input type="button" value="reset" onclick="submitForm(this)">
+    </form>
+
+    <table id="emptyTable">
+        <caption>Empty extra table</caption>
+        <tr>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+            <th>Empty</th>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+        <tr>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+            <td>Empty</td>
+        </tr>
+    </table>
+    <h4>Contact</h4>
+    <dl>
+        <dt>Yuri</dt>
+        <dd>Yuri@live.nl</dd>
+        <dt>Jens</dt>
+        <dd>Jens@mail.com</dd>
+    </dl>
+
+    <p>Another quote from Steve Jobs:
+        <q>Some people think design means how it looks. But of course, if you dig deeper, it’s really how it works.</q>
+    </p>
+
+<h2>Main characters of Rick and Morty</h2>
+<ul id="randm">
+    <li>Summer</li>
+    <li>Tiny Rick</li>
+    <li>Squanchy</li>
+    <li>Pii!11ckle Riiiiiiiiiick</li>
+</ul>
+
+<h4>AAAAAaaaaaand another list to show that we understand everything</h4>
+<ul id="lijst">
+    <li>hooi</li>
+    <li>hoe gaat t</li>
+    <li>GOed, mj?</li>
+    <li>goed, doeix</li>
+</ul>
+    <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+    <script src="main.js"></script>
+</body>
+
+</html>

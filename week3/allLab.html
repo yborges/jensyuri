@@ -1,0 +1,518 @@
+<html>
+<head>
+
+    <meta charset="UTF-8">
+    <title>Lab</title>
+</head>
+
+<body bgcolor="yellow">
+<h1>Lab 1</h1>
+
+<h3>Question 1</h3>
+<p>‘W3C was pushing for an accessible web-one that worked for blind and disabled people’. W3C ‘also wanted a semantic web, doing for ideas what it had done previously for documents-linking all of worlds information into a sort of decentralized, collectivized google-for-ideas.’ While WHATWG ‘wanted to make the monkey dance’
+</p>
+<h3>Question 2</h3>
+<p>The difference between the internet and the World Wide Web is that the Internet is the network of computers connected to each other worldwide, and the World Wide Web is a system of documents and other resources that are accessible by URLs and actually run on the infrastructure we understand as the internet.
+</p>
+<h3>Question 3</h3>
+<p>URIs, HTTP, HTML; URIs for being able to locate a resource in the World Wide Web, HTTP for transferring information between devices in the World Wide Web and HTML the markup language used by the clients(usually browsers) to render the information, or pages.
+</p>
+<h3>Question 4</h3>
+<p>The file exported from word contains a lot of XML code. Part of the code is just metadata about the document describing for example the authors based on the owner of the office word license. Another part of the XML seems to be specifying an XML scheme for a more specific rendering of the page, probably so that the Microsoft Office Word can still reopen the exported HTML document. Furthermore the document uses CSS to style the page.</p>
+<h3>Question 5</h3>
+<p>The authorative sources are IETF and ISOC the main bodies that take care of the development of the internet. The descriptions were found in RFCs, publications describing technologies such as protocols and request for changing them. You cannot get a better description of a protocol than the protocol description itself!</p>
+
+<table id="protocolTable">
+    <tr>
+        <th>protocol name</th>
+        <th>port number</th>
+        <th>description</th>
+        <th>authorative source</th>
+    </tr>
+
+    <tr>
+        <td>HTTP</td>
+        <td>80</td>
+        <td>The Hypertext Transfer Protocol (HTTP) is a stateless application-
+            level protocol for distributed, collaborative, hypermedia information
+            systems.</td>
+        <td><a href="https://tools.ietf.org/html/rfc7235">rfc7235</a></td>
+    </tr>
+    <tr>
+        <td>SSH</td>
+        <td>22</td>
+        <td>The Secure Shell (SSH) is a protocol for secure remote login and
+            other secure network services over an insecure network.</td>
+        <td><a href="https://tools.ietf.org/html/rfc4253">rfc4253</a></td>
+    </tr>
+    <tr>
+        <td>FTP</td>
+        <td>21</td>
+        <td>The objectives of FTP are 1) to promote sharing of files (computer
+            programs and/or data), 2) to encourage indirect or implicit (via
+            programs) use of remote computers, 3) to shield a user from
+            variations in file storage systems among hosts, and 4) to transfer
+            data reliably and efficiently.  FTP, though usable directly by a user
+            at a terminal, is designed mainly for use by programs.</td>
+        <td><a href="https://tools.ietf.org/html/rfc959">rfc959</a></td>
+    </tr>
+
+</table>
+
+<h3>Question 6</h3>
+
+<p>The strong tag means that the text inside the tag should somehow be shown differently so as to make it more visible. But how to get the attention of the user may vary from browser to browser or even between different users, think of a blind person for example. When using the bold tag, one defines that the way to get the attention from the user will be done by only making the text bold, but this might not be enough in certain situations. In short: b is not semantic and strong is semantic and since the latter carries more meaning about the content it should be preferred. Another example would be the tags cite and i.</p>
+
+<h3>Question 7</h3>
+
+<p>Div is a block element and span is an inline element. A div introduces a line break so it should not be used when e.g. including some text in a paragraph.</p>
+
+<h3>Question 8</h3>
+
+<p>When styling a webpage, this can be done statically by including the desired attributes to the tags you want to style. However design is a pretty serious business and having the style hardcoded in the html would make the whole design more difficult to debug and to finish. The HTML code would be much more difficult to read too. Using CSS brings a separation between the elements of the page and the design of the page. Furthermore CSS allows for easy selection of multiple elements which makes it much easier to develop and change the page design.</p>
+
+<h3>Question 9</h3>
+
+<p>The letters appear tilted as expected.</p>
+
+<h3>Question 10</h3>
+
+<p>Safari and Firefox. Firefox uses Gecko and Safari uses Webkit for rendering. Firefox is open-source, safari isn't. </p>
+
+
+<h1>Lab 2</h1>
+
+<h3>Question 1</h3>
+<p>Guideline 1. Provide equivalent alternatives to auditory and visual content.</p>
+<h3>Question 2</h3>
+<h4>We ran the WAVE accesibility checker on the Apple website. Our key observations are: </h4>
+<dl>
+    <dt>Errors</dt>
+    <dd>The Apple site, only had two errors, we think they did a very good job, considering the errors were not very big errors</dd>
+    <dt>Alerts</dt>
+    <dd>The Apple website had only one alert, which was that h1 was never used. Not a very big issue.</dd>
+</dl>
+
+<h3>Question 3</h3>
+<p>We tested three color combinations</p>
+<dl>
+    <dt>Red (#FF0000) on black</dt>
+    <dd>WCAG 2 AA Compliant: No</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: No</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): No</dd>
+    <dt>Red (#FF0000) on white (#FFFFFF)</dt>
+    <dd>WCAG 2 AA Compliant: No</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: No</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): No</dd>
+    <dt>black (#000000) on white (#FFFFFF)</dt>
+    <dd>WCAG 2 AA Compliant: Yes</dd>
+    <dd>WCAG 2 AA Compliant (18pt+): Yes</dd>
+    <dd>WCAG 2 AAA Compliant: Yes</dd>
+    <dd>WCAG 2 AAA Compliant (18pt+): Yes</dd>
+
+    <blockquote cite="https://snook.ca/technical/colour_contrast/colour.html#fg=FF0000,bg=FFFFFF"> <q>The Colour Contrast Check Tool allows to specify a foreground and a background colour and determine if they provide enough of a contrast "when viewed by someone having color deficits or when viewed on a black and white screen"[W3C].
+        The tool will indicate that the colours pass the test if both the colour difference and the brightness difference exceed their threshold. It will indicate that it sort of passes if only one of the two values exceed their threshold. And finally, it'll fail to pass if neither value exceeds its threshold.
+        The tool will also indicate if the colours pass the newer WCAG 2.0 contrast ratio formula. The WCAG 2.0 formula differentiates between text smaller than 18pt text larger than 18pt (or text that is bold and larger than 14pt). For AA compliance, text should have a ratio of at least 4.5:1 (larger text, at least 3:1). For AAA compliance, text should have a ratio of at least 7:1 (larger text, at least 4.5:1).
+    </q>
+    </blockquote>
+</dl>
+<h3>Question 4</h3>
+<p>Native apps are faster because its execution is nearer the hardware. But browsers are getting faster and faster and web apps have become very important even for big companies. Web apps are easier to maintain and access to the greater public.</p>
+<h3>Question 5</h3>
+<p>The internationalization group ensures that web technologies work with everywhere. Language is a main aspect of this. Ensuring that foreign language characters are available and easy to implement are very important aspects that the internationalization groups takes care of.</p>
+<h3>Question 6</h3>
+<dl>
+    <dt>http://www.few.vu.nl</dt>
+    <dd>The IP-address is: 130.37.164.154</dd>
+    <dd>I found the answer by opening my terminal and in terminal I typed: nslookup wwww.few.vu.nl and then I got my answer.</dd>
+    <dt>http://www.cs.vu.nl</dt>
+    <dd>The IP-address is: 130.37.164.154 (exactly the same)</dd>
+    <dd>I found the answer by opening my terminal and in terminal I typed: nslookup wwww.cs.vu.nl and then I got my answer.</dd>
+
+    <!-- Yuri kan jij deze vraag beantwoorden:-->
+    <p>How could the results you find influence the web servers' functionality?</p>
+</dl>
+
+<h3>Question 7</h3>
+
+<!-- heb al die reasons overgenomen van https://www.webopedia.com/DidYouKnow/Internet/ipv6_ipv4_difference.html en eentje van wiki. Moet misschien een beetje worden aangepast of in iig gequote maar ik wist niet hoe dat moet binnen li-->
+<h4>Main features of IPv6</h4>
+<ul>
+    <li></li>
+    <li></li>
+    <li></li>
+    <li></li>
+</ul>
+
+<h4>Reasons to move from 4 to 6:</h4>
+<ul>
+    <li>Far more addresses are needed to connect devices than the IPv4 address space had available</li>
+    <li>The use of multicast addressing is expanded and simplified</li>
+    <li>Simpler header formats</li>
+    <li>Built-in authentication and privacy support</li>
+</ul>
+<h3>Question 8</h3>
+<blockquote cite ="https://developer.mozilla.org/en-US/docs/Web/HTTP/Basics_of_HTTP/MIME_types">The Multipurpose Internet Mail Extensions (MIME) type is a standardized way to indicate the nature and format of a document.</blockquote>
+<h4>Most common subtypes of text:</h4>
+<ul>
+    <li>text/plain</li>
+    <li>text/html</li>
+</ul>
+<a href="https://www.iana.org/assignments/media-types/media-types.xhtml">the most authoritative source with the complete list</a>
+
+<h3>Question 9</h3>
+<p>GET, POST, DELETE. Get asks for information, post attempts to transmit information, delete attempts to delete information on the server.</p>
+
+<h3>Question 10</h3>
+<p>key: a1d1ab71</p>
+
+<h1>Lab 3</h1>
+
+<h3>Question 1</h3>
+<p>We used Safari. By enabling the Develop tab and clicking on JavaScript Console we were able to open the console.
+    To test console.log() we inserted an external JS file to the index.html and executed console.log("Hello World")
+    which appeared on Safari's console just fine.</p>
+<h3>Question 2</h3>
+<p>We added these lines in js</p>
+
+<pre><code>document.body.style.backgroundColor = "red";
+   for(i = 0; i < document.getElementsByTagName("a").length; i++) {
+    document.getElementsByTagName("a")[i].classList.add("active_links");
+}</code></pre>
+
+<p>And this in screen.css:</p>
+<pre>    .active_links:active {
+    font-size: large;
+    color: deeppink;
+    }</pre>
+
+<h3>Question 3</h3>
+<p>$("a").addClass("active_links");</p>
+<p>Pro's:</p>
+<ul>
+    <li>Shorter</li>
+    <li>You don't need to loop through all the elements to change things.</li>
+</ul>
+<p>Cons:</p>
+<ul>
+    <li>learning curve</li>
+    <li></li>
+</ul>
+<h3>Question 4</h3>
+<p>I'm more familiar with Java. The syntax of JS and Java are similar and based on C. Java is pre compiled and therefore
+    it achieves better performance. Python and JS are interpreted at runtime and are therefore slower. JS relies much
+    more on callback functions. Java is statically typed whereas Python and JS are dynamically typed, which leads to
+    more freedom when coding, but that comes with a price: unstructured code.</p>
+<h3>Question 5</h3>
+<p>AJAX means Asynchronous JavaScript And XML. It is asynchronous because the browser(client) is still able to
+    perform actions while waiting for a request from the server. It can also be set to synchronous which would lock
+    the browser until the server responds.</p>
+<h3>Question 6</h3>
+<p>The role of the host objects in JavaScript is to let JS change their properties. e.g. the document and window host
+    objects are accesible via JS and let us change properties of html elements and access the size of the host window.
+    There are no equivalents in Java or Python because these programs are to some extent executed in the same environment
+    as far as the programs are concerned. Although the host computers aren't the same and their properties can actually
+    be accessed but they are not considered objects, most probably because they are read-only. </p>
+<h3>Question 7</h3>
+<p></p>
+<dl>
+    <dt>Window</dt>
+    <dd>Interacts with browser window.</dd>
+    <dt>Document</dt>
+    <dd>Interacts with page in the window.</dd>
+</dl>
+<h3>Question 8</h3>
+<p>Events are as the name says "things" that happen to elements in the DOM. When an event is triggered, event listeners
+    can react by executing an action. Event listeners are also elements in the DOM that have event handlers attached
+    to them.</p>
+<h3>Question 9</h3>
+<p>The autocomplete functionality creates an interactive text field that shows autocomplete text as the user is typing
+    using AJAX and generates a mark on the map. The API required the autocomplete functionality to be linked to the
+    map and for an event listener to be created to handle the changes in the text field of the autoselect HTML element.</p>
+<h3>Question 10</h3>
+
+<h3>My Google Maps Demo</h3>
+<div id="map"></div>
+<script>
+    function initMap() {
+        var uluru = {lat: -25.363, lng: 131.044};
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 4,
+            center: uluru
+        });
+        var marker = new google.maps.Marker({
+            position: uluru,
+            map: map
+        });
+    }
+</script>
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyC0P74BU-HMMI4X70Qu1eWxjSJyVDseStY&callback=initMap">
+</script>
+
+<h1>Lab 4</h1>
+
+<h3>Question 1.a.</h3>
+<p>There are words in the list that have occured zero times in the text file, like 'iv' and 'ix'.</p>
+<h3>Question 1.b.</h3>
+<p>The lecturers explanation of stop words: <q>Stop words are meaningless, like I or the or ir.</q> these words are
+    removed. It makes sence to put all of these words in the stop words list, except for the word Alice. Because Alice
+    is a name and should not be ignored. And also i dont think that 's' and 't' should be ignored, these re just results
+    of bad tokenizing. </p>
+<h3>Question 1.c.</h3>
+<p>No I dont think the top 30 follows Zipf's law, because the first word occurs 2.25 times more than the third word on
+    the top 30 (which should be 3 times) and the first word occurs 2.6 times more than the fourth word on the top 30
+    (which should be 4 times). You can also see this because the graph is not a straight line in the beginning. </p>
+<h3>Question 1.d.</h3>
+<p>Heaps law applies. In this case it describes the dictionary size as a function of the input tokens</p>
+
+<h3>Question 2.a.</h3>
+<p><q>Typically you measure information retrieval systems on two metrics, precision and recall.
+    precision is the number of relevant documents that you have found.
+    Recall is the number of relevant documents found, normalized by the number of relevant documents that exist. </q>
+    The quality of search will be assessed based on the relevance of the returned results.
+    The search returns all the document parts, so the precision = relevant parts/total parts.</p>
+<h3>Question 2.b.</h3>
+<p>Computing the TFIDF matrix takes quite some time, because there has to be calculated a weight of occurance for each
+    word in each chapter. </p>
+<h3>Question 2.c.</h3>
+<p>TF vs TF-IDF search.</p>
+<p>TF-IDF is TF combined with IDF, this results in a better precision, but a worse recall. The difference is basically
+    that TF-IDF takes the importancy of terms in account, so words such as 'is' and 'of' weigh less. while rare words
+    weigh more.</p>
+<h3>Question 2.d.</h3>
+<p>The precision of the search is the same for both results.</p>
+<h3>Question 2.e.</h3>
+<p>The number of suggested documents would be increased due to a lower precision and higher recall.</p>
+<h1>Lab 5</h1>
+<h3>Question 1</h3>
+<p>1. HTTP GET is idempotent because it shouldn't matter how many times you create an HTTP GET request to a server:
+    the outcome should be the same, the requested resource should be returned to the client requesting it. HTTP POST
+    on the other hand isn't idempotent because POST is meant to actually change something on the server e.g. adding
+    a new entry to a database which may or may not result in the same outcome.
+</p>
+<p>2. Idempotent requests are easier to cache because the response sent back is always the same and hence cacheable.
+</p>
+<p>3. Visitor counters are actually updated with each visit to the website. The client still asks this information via
+    HTTP GET, but it is a resource that changes in value all the time.</p>
+<p>4. A visitor counter takes into account how many times one IP visited the website at a given time. Since more than
+    one client can access a server through a proxy and the proxy has always the same address, when clients use proxies
+    the visitor counter isn't actually accurate anymore since the server will only count just the proxy as a visitor.</p>
+<h3>Question 2</h3>
+<p>Stateless means that no information about the connection is saved. In the case of browsers this means using
+    no cookies, which are actually just pieces of information saved by the browser. Stateless protocols require
+    a lot of space in the server side when the application has a lot of clients. This is the main advantage of the
+    stateless protocol. The disadvantage is a stateless website by definition doesn't keep track of what the session.
+    This is a problem because nowadays to make an application dynamic and data-driven, developers must somehow keep
+    track of what the user is doing.
+</p>
+<h3>Question 3</h3>
+<p>The information about a shopping basket needs to be saved somewhere. Usually this is done by saving the 'state'
+    of the application in a cookie. This information can also be saved on the server side and retrived upon
+    the client's returning to the website. The latter is more difficult to create because it would require a
+    database to store the shopping bask information or expensive RAM memory space.
+</p>
+<h3>Question 4</h3>
+<table>
+    <tr>
+        <th>Company</th>
+        <th>Endpoint</th>
+        <th>Method</th>
+        <th>Response format</th>
+        <th>response codes</th>
+    </tr>
+    <tr>
+        <th>Spotify</th>
+        <th>/v1/albums/{id}</th>
+        <th>GET</th>
+        <th>JSON</th>
+        <th>200: OK, 401: NOT authorized, 503: overloaded</th>
+    </tr>
+    <tr>
+        <th>Twitter</th>
+        <th>/1.1/trends/place.json?id=1</th>
+        <th>GET</th>
+        <th>JSON</th>
+        <th>200: OK, 401: NOT authorized, 503: overloaded</th>
+    </tr>
+</table>
+
+<h3>Question 5</h3>
+<p>By sending an HTTP OPTIONS request to server, we get a response without a body, but with the following headers:
+    -Access-Control-Allow-Origin: *
+    -Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS
+    The * in the origin means that the server will accept any clients.
+</p>
+<h3>Question 6</h3>
+<p>Content-Type: application/json. Yes, it is what I expected. It's very usual to work with JSON when working with
+    RESTful API's.
+</p>
+
+<h3>Question 7</h3>
+<p>I didn't download the hello.py, but upon reload the server probably prints on which port of localhost it is
+    listening to. A syntax error with auto reload on will cause the server to stop thereby not becoming unresponsive
+    to clients(your browser).
+</p>
+<h3>Question 8</h3>
+<p>The key advantage is that data in JSON format can be processed easily by any client. Also if a client of the
+    webserver is a desktop application not rendering data in HTML but in another format, then using JSON allows such
+    a client to still communicate easily to the web server. In short JSON, as the name says, is an object notation and
+    hence transfer only data. HTML on the other hand is more than just data: it's also about the design and position
+    of elements. The server-side shouldn't be occupied with such aspects.</p>
+
+<h1>Lab 6</h1>
+<h3>Question 1</h3>
+<p></p>
+<h3>Question 2</h3>
+<!-- source: http://www.longtail.com/about.html-->
+<p>Chris Anderson wrote The Long Tail, which first appeared in Wired in October 2004.
+    The theory of the long tail says that our culture and economy is increasingly shifting away from a focus on a
+    relatively small number of "hits" that are the most popular (at the head of the demand curve) to a relatively big
+    number of the less popular niches in the tail. He states that the less popular niches can return as much profit as
+    the sales of the popular items. It may be hard for physical stores to have such large inventory, due to space
+    limitations and storage costs. But for the online stores, it will be a lot easier to handle this broad variety of
+    items that customers want because, online stores can have decentralized storages and may be able to buy items
+    from retailers when the don't have it in stock.</p>
+
+<h3>Question 3</h3>
+
+<h4>a.</h4>
+<p>Net neutrality is the idea that every website is treated equally and that the web is open to everyone. This means
+    that internet service providers cant block or slow particular websites. </p>
+<h4>b.</h4>
+<p>I agree with the statements in favor of net neutrality because I am not able to think of/find any positive argument
+    against net neutrality and I think its very important that small companies/start-ups have a fair change to grow. </p>
+<h4>c.</h4>
+<p>It is possible that countries from the EU will follow the USA</p>
+
+<h3>Question 4</h3>
+<p>Data.gov is a site from the U.S. government. It's role is to make data of the government accesible to everyone, this
+    increases the transparency of the government. Potential dangers of such sites are, that people could easily
+    misunderstand meaningful information and threats to privacy.</p>
+
+<h3>Question 5</h3>
+<p>problems in his top 10 that have become rare:</p>
+<ul>
+    <li>1. Bad Search</li>
+    <li>3. Not Changing the Color of Visited Links</li>
+    <li>4. Non-Scannable Text</li>
+    <li>5. Fixed Font Size</li>
+    <li>7. Anything That Looks Like an Advertisement</li>
+    <li>8. Violating Design Conventions</li>
+</ul>
+<p>One severe usability problem you encounter on current Web sites that is missing from this list is, videos that start
+    playing as soon as you enter the site.</p>
+<h3>Question 6</h3>
+
+<h3>Question 7</h3>
+
+<h4>Mini-survey on Netflix site:</h4>
+<p>Are you currently using Netflix in your home country?</p>
+<form action="/action_page.php" autocomplete="on">
+    <select>
+        <option value="yes">yes</option>
+        <option value="no">no</option>
+    </select>
+    <p> </p>
+    country where I am currently:<input type="text" name="foreignC"><br>
+    Home country:<input type="text" name="homeC"><br>
+
+</form>
+<p>How satisfied are you with Netflix on a rate from 1-5 (1 is terrible and 5 is amazing)</p>
+<select>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+</select>
+
+<p>How satisfied are you with Netflix in foreign countries?</p>
+<select>
+    <option value="1">1</option>
+    <option value="2">2</option>
+    <option value="3">3</option>
+    <option value="4">4</option>
+    <option value="5">5</option>
+    <option value="6">I never used Netflix in a foreign country</option>
+</select>
+
+<p>If there are some specific things that need to be improved to improve your Netflix experience in foreign countries,
+    please state below:</p>
+Improvements in foreign countries: <input type="text" name="foreign" value="help us improve Netflix"><br>
+<p>If there are some specific things that need to be improved to improve your Netflix experience in your home country,
+    please state below:</p>
+Improvements in home country: <input type="text" name="home" value="help us improve Netflix"><br>
+
+<input type="submit">
+
+<h4>Explanation</h4>
+<p>The first three questions are questions to get morre information about the user who is filling in the survey</p>
+<p>The fourth question is a question about the Netflix experience of users in their home country (we need this
+    information to know if they have a better or worse experience in foreign countries). The fifth question is a
+    question about the Netflix experience of users in foreign countries (now we can compare their home country
+    experience to their foreign country Netflix experience).</p>
+
+<p>sixth and seven question are open because we want to know exactly what they are missing.</p>
+
+<h3>Question 8</h3>
+<p>The Common Log Format is a standardized text file format used by web servers when generating server log files.</p>
+<p>The Common Log Format contains the folowing information (found on the apache website):</p>
+<blockquote cite="https://httpd.apache.org/docs/1.3/logs.html#common">
+    <ul>
+        <li>1. The IP address of the client (remote host) which made the request to the server.</li>
+        <li>2. The user id of the person requesting the document as determined by HTTP authentication.</li>
+        <li>3. The time that the server finished processing the request.</li>
+        <li>4. The request line.</li>
+        <li>5. The status code that is returned to the client by the server.</li>
+        <li>8. The size of the object returned to the client.</li>
+    </ul>
+</blockquote>
+
+<p>This can be used by web log analysis software to identify the user, the way that the user requested and the time and
+    timezone the user is in.</p>
+<p>#2 and #4 would be dependent and the rest independent.</p>
+
+<h3>Question 9</h3>
+<h4>We are going to look at the history of YouTube</h4>
+
+<p>YouTube is founded in February 2005. <a href ="https://web.archive.org/web/20050428014715/http://youtube.com/">The
+    first webpage saved by the archive </a> is from 28th of April, 2005. Here the website immediately asks for your username,
+    password, gender, gender that you are seeking and age that you are seeking for. Half a year later,
+    <a href ="https://web.archive.org/web/20051028001735/http://youtube.com/">on the 28th of October, 2005 </a> the webpage
+    is changed a lot, YouTube now has a Today's featured videos table, a star ranking system. The website doesnt
+    immediately asks all those personal questions stated before and it looks a bit more organized. Again half a year
+    later,<a href ="https://web.archive.org/web/20060428025149/http://youtube.com/">on the 28th of April, 2006 </a> the layout
+    and the colors of the site have changed. Again half a year later,
+    <a href ="https://web.archive.org/web/20061026101445/http://youtube.com/">on October 30th, 2006 </a> the website is more
+    minimalistic.two months later, on December 27 2006, one month after Google bought YouTube (for US$1.65 billion), the
+    website hasnt changed. another half year later,
+    <a href ="https://web.archive.org/web/20070628011128/http://youtube.com/">June 28, 2007</a> there are ads on
+    YouTube.One year later, <a href ="https://web.archive.org/web/20080626052953/http://youtube.com/">June 26, 2008</a>
+    YouTube is a little bit fancier.another half year later,
+    <a href ="https://web.archive.org/web/20081226065415/http://youtube.com/">December 26, 2008</a> there have been some
+    minor changes. A year later, <a href ="https://web.archive.org/web/20091231084844/http://youtube.com/">December 30,
+        2009</a> YouTube has an all new design, and a Spotlight tab, Recommended for you tab, videos being watched now
+    tab and a most popular tab. A year later, <a href ="https://web.archive.org/web/20101230080813/http://youtube.com/">
+        December 30, 2010</a> YouTube has a new design, it is more minimalistic again, but still all these tabs but,
+    'videos being watched now' made place for 'Trending'. Another year later,
+    <a href ="https://web.archive.org/web/20111231001951/http://youtube.com/">
+        December 31, 2011</a> YouTube has a totally new design, the website is a lot clearer, all the categories are
+    in a list on the left. The website looks beautiful and it finally looks like it is finished. Another year later,
+    <a href ="https://web.archive.org/web/20121231000105/http://youtube.com/">December 31, 2012</a> YouTube has some
+    design changes, the biggest difference is that the webiste looks a lot brighter and very much like the Youtube we
+    use today. Another year later,<a href ="https://web.archive.org/web/20131230235935/http://www.youtube.com/">December
+        31, 2013</a> YouTube looks like a perfected version of the Youtube from a year before. It is a little bit more
+    ordered.Another year later,<a href ="https://web.archive.org/web/20131230235935/http://www.youtube.com/">December
+        31, 2013</a> YouTube looks like a perfected version of the Youtube from a year before. It is a little bit more
+    ordered.Another year later,<a href ="https://web.archive.org/web/20141231000541/https://www.youtube.com/">December
+        31, 2014</a> Youtube is again more minimalistic and they added recommended channels and there are way more
+    videos thrown right into your face on the homepage. Another year later,
+    <a href ="https://web.archive.org/web/20151231000916/https://www.youtube.com/">December
+        31, 2015</a> There are no noticable changes. Another year later,
+    <a href ="https://web.archive.org/web/20161231000242/https://www.youtube.com/">December
+        31, 2016</a> We see the YouTube exactly as we know it today.</p>
+</body>
+</html>

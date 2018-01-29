@@ -18,8 +18,10 @@ function submitForm(caller) {
     if(caller.value === "submit") {
         $.ajax({
             url: 'http://localhost:8089/api',
+            contentType: "application/json; charset=utf-8",
+            dataType   : "json",
             type: 'POST',
-            data: data
+            data: JSON.stringify(data)
         }).done(function(data,status,xhr){
             fillTable(false);
         });
@@ -33,17 +35,15 @@ function submitForm(caller) {
         });
     }
 }
-
+/*
+Sends a DELETE request with the ID of the element to be deleted
+ */
 function deletePhone(caller) {
+    id = $(caller).data('id')
 
-    var data = {
-        id: $(caller).data('id')
-    };
     $.ajax({
-            url: 'http://localhost:8089/api',
-            dataType: 'json',
-            type: 'DELETE',
-            data: data
+            url: `http://localhost:8089/api/${id}`,
+            type: 'DELETE'
         }).done(function(data,status,xhr){
 
         });

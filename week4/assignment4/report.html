@@ -9,17 +9,108 @@
             border-collapse: collapse;
         }
     </style>
+
+    <!--needed to use the fancy navigation bar-->
+    <!--below is copied from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <style>
+        .navbar {
+            overflow: hidden;
+            background-color: #333;
+            font-family: Arial;
+        }
+
+        .navbar a {
+            float: left;
+            font-size: 16px;
+            color: white;
+            text-align: center;
+            padding: 14px 16px;
+            text-decoration: none;
+        }
+
+        .dropdown {
+            float: left;
+            overflow: hidden;
+        }
+
+        .dropdown .dropbtn {
+            cursor: pointer;
+            font-size: 16px;
+            border: none;
+            outline: none;
+            color: white;
+            padding: 14px 16px;
+            background-color: inherit;
+            font: inherit;
+            margin: 0;
+        }
+
+        .navbar a:hover, .dropdown:hover .dropbtn, .dropbtn:focus {
+            background-color: red;
+        }
+
+        .dropdown-content {
+            display: none;
+            position: absolute;
+            background-color: #f9f9f9;
+            min-width: 160px;
+            box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+            z-index: 1;
+        }
+
+        .dropdown-content a {
+            float: none;
+            color: black;
+            padding: 12px 16px;
+            text-decoration: none;
+            display: block;
+            text-align: left;
+        }
+
+        .dropdown-content a:hover {
+            background-color: #ddd;
+        }
+
+        .show {
+            display: block;
+        }
+    </style>
+    <!--end of copy-->
+
 </head>
 <body>
 <h2>Self-evaluation report </h2>
 <h3>date of evaluation: 31-01-2018, Group number: 111, Yuri Borges and Jens van Groeningen</h3>
 
-<h4>Introduction</h4>
+<!--below is copied from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click-->
+<div class="navbar">
+    <a href="https://www.vu.nl/nl/index.aspx" target="_blank">VU</a>
+    <!--<a href="http://www.samsung.com/nl/">Samsung</a>-->
+    <!--<a href="http://consumer.huawei.com/nl/">Huawei</a>-->
+    <div class="dropdown">
+        <button class="dropbtn" onclick="myFunction()">Sections
+            <i class="fa fa-caret-down"></i>
+        </button>
+        <div class="dropdown-content" id="myDropdown">
+            <a href="#intro">Introduction</a>
+            <a href="#WCAG">WCAG</a>
+            <a href="#impPlan">Improvement plan</a>
+            <a href="#ApA">Appendix A</a>
+            <a href="#ApB">Appendix B</a>
+        </div>
+    </div>
+</div>
+<!--end of copy-->
+
+<h4 id="intro">Introduction</h4>
 <!--<p>Introduction section providing a high-level overview of your page in terms of accessibility and/or usability-->
     <!--(max 200 words)</p>-->
 <p>HIER KAN IK TOCH NOOIT MEER DAN 8 WOORDEN OVER SCHRIJVEN. I DONT FUCKING UNDERSTAND. WE HBBEN DE SIMPELSTE WEBSITE
     OOIT MOETEN MAKEN EN DAN GAAN ZE ZULKE VRAGEN STELLEN. WAT EEN IDIOTERIE. YURI!?</p>
 
+<!--Yuri, I believe in you <3-->
 
 <!--Voorbeeld, dit zijn 200 woorden:-->
 
@@ -36,19 +127,19 @@
     <!--ne, ad pri aliquam facilisis. Ferri debet homero in cum, utinam fuisset honestatis an nam. Qui id scaevola mandamus, -->
     <!--cum.</p>-->
 
-
-
-<h4>WCAG</h4>
+<h4 id="WCAG">WCAG</h4>
 <!--<p>Accessibility highlights section providing a short discussion of what you identify to be the WCAG guidelines that-->
     <!--are the most relevant to your page (pick 2 or 3)</p>-->
 
-<p>The WCAG guidelines that are the most relevant to our page are Guideline 1.1 and Guideline 1.4.1. Guideline 1.1 is
-    relevant to our page because we have a lot of images which is non-text content, and we provided all these images
-    with text alternatives. Guideline 1.4.1 is relevant to our page because we did not implement this correctly, the
-    font color (green) of the links to the Apple, Samsung, and Huawei websites is not a good combination with the
-    background (dark blue and white marble). </p>
+<p>The WCAG guidelines that are the most relevant to our page are guideline 1.1, guideline 1.4.1 and guideline 2.4.
+    Guideline 1.1 is relevant to our page because we have a lot of images which is non-text content, and we provided all
+    these images with text alternatives. Guideline 1.4.1 is relevant to our page because we did not implement this
+    correctly, the font color (green) of the links to the Apple, Samsung, and Huawei websites is not a good combination
+    with the background (dark blue and white marble). Guideline 2.4 is very relevant for our webpage because first we
+    only met 1/4 of the guidelines from 2.4 and now after we executed the improvement plan, we meet all four the
+    guidelines from 2.4.</p>
 
-<h4>Improvement plan</h4>
+<h4 id="impPlan">Improvement plan</h4>
 <!--<p>Improvement plan section providing a prioritized list of improvement actions to improve your page, in terms-->
     <!--of- accessibility and usability (based on Appendix A),- other course learning goals (based on Appendix B)- the-->
     <!--selected high lights, and the other material in the appendixes. For each item, describe what you aim to improve,-->
@@ -56,15 +147,16 @@
     <!--user experience in screen readers, HTML alt tags with short texts describing the image need to be added for all img-->
     <!--elements).</p>-->
 <p>There are some improvement actions that we can do to improve our page, in terms of accessibility and usability
-    (based on Appendix A) but not that much. We have listed the improvement actions below: </p>
+    (based on <a href ="#ApA">Appendix A</a>) but not that much. We have listed the improvement actions below: </p>
 
-<ul>
-    <li>1. We have to change the color of the links from Apple, Samsung and Huawei</li>
-    <li>2. We have to change the title to something that says more about the content of our website.</li>
-    <li>3. We should add the ability that people can add an alt for an image in the Top selling models table.</li>
-    <li>4. We should add links at the top of the page to each area of the content.</li>
-    <li>5. IK WEET NIET WAT ER NOG MEER VERANDERD KAN WORDEN. YURI!?</li>
-</ul>
+<ol>
+    <li>We have to change the color of the links from Apple, Samsung and Huawei.</li>
+    <li>We have to change the title to something that says more about the content of our website.</li>
+    <li>We should add the ability that people can add an alt for an image in the Top selling models table.</li>
+    <li>We should add links at the top of the page to each area of the content, to bypass blocks of content.</li>
+    <li>When somebody clicks a link to another website, this site should open in a new tab.</li>
+    <li>WEET JIJ NOG EEN LEUKE GOEDE VERBETERING VAN DE SITE? YURI!?</li>
+</ol>
 
 <p>1. We did not change the color, instead we added a beautiful dark gray navigation bar, with the links to Apple,
     Samsung and Huawei. We changed the original links to Test1, 2 and 3 So it is still visible what we changed.</p>
@@ -73,9 +165,11 @@
     KNOW. YURI!?</p>
 <p>4. We added a dropdown menu in the navigation bar, called sections. In this menu you can quickly go to important
     sections of the webpage.</p>
-<p>5. HOE GAAN WE VIJFDE VERBETERPUNT UITVOERE? YURI!?</p>
+<p>5.We added target="_blank" to the links after the URL and this causes that a link is opened in a new tab.</p>
 
-<h4>Appendix A</h4>
+<p>6. EN HOE VOEREN WE DIE DAN UIT? YURI!?</p>
+
+<h4 id="ApA">Appendix A</h4>
 
 <table style="width:100%">
     <tr>
@@ -162,11 +256,32 @@
     </tr>
 </table>
 
-<h4>Appendix B</h4>
+<h4 id="ApB">Appendix B</h4>
 
 <p>We only got feedback on the first assignment. The feedback was: <q>For your lab questions, please keep them all in
     one html document as you'll use this for all lab questions throughout the entire course.</q></p>
 <p>This feedback was not about the actual assignment but about our organization of the lab questions.</p>
+
+
+<!--below is copied from https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_dropdown_navbar_click-->
+<script>
+    /* When the user clicks on the button,
+    toggle between hiding and showing the dropdown content */
+    function myFunction() {
+        document.getElementById("myDropdown").classList.toggle("show");
+    }
+
+    // Close the dropdown if the user clicks outside of it
+    window.onclick = function(e) {
+        if (!e.target.matches('.dropbtn')) {
+            var myDropdown = document.getElementById("myDropdown");
+            if (myDropdown.classList.contains('show')) {
+                myDropdown.classList.remove('show');
+            }
+        }
+    }
+</script>
+<!--End of copy-->
 
 </body>
 </html>
